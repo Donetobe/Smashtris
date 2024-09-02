@@ -63,7 +63,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!114 &-6653663760146662678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,10 +76,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fa07a8ca9aec584090ceb0cd4c7de96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallSpeed: 1
-  sidewaysSpeed: 1
-  moveRightKey: 275
-  moveLeftKey: 276
+  fallSpeed: 40
+  sidewaysSpeed: 0
+  rotationAmmount: 0
 --- !u!1001 &727888167197105405
 PrefabInstance:
   m_ObjectHideFlags: 0
