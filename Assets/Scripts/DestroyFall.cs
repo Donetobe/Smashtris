@@ -19,19 +19,23 @@ public class DestroyFall : MonoBehaviour
         // Access the specific script on the parent object
         Fall parentScript = parentObject.GetComponent<Fall>();
         
-
-        if (parentScript != null)
+        if (collision.gameObject.tag == "ground")
         {
-            // Destroy the ParentScript component on the parent object
-            Destroy(parentRigidbody);
-            Destroy(parentScript);
-            if (spawner.hasSpawned)
+            if (parentScript != null)
             {
-                spawner.SpawnPiece();
-            }
-          
+                Debug.Log("Fall destroyed");
+                // Destroy the ParentScript component on the parent object
+                Destroy(parentRigidbody);
+                Destroy(parentScript);
+                if (spawner.hasSpawned)
+                {
+                    spawner.SpawnPiece();
+                }
 
+
+            }
         }
+
    
     }
     
