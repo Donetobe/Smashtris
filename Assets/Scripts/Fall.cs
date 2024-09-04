@@ -37,7 +37,7 @@ public class Fall : MonoBehaviour
     {
          newPosition = transform.position;
 
-        rb2d.MovePosition(rb2d.position + new Vector2(0, -fallSpeed * Time.deltaTime));
+        
 
        
 

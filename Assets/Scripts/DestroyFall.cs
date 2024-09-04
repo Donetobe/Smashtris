@@ -18,19 +18,26 @@ public class DestroyFall : MonoBehaviour
         Rigidbody2D parentRigidbody = parentObject.GetComponent<Rigidbody2D>();
         // Access the specific script on the parent object
         Fall parentScript = parentObject.GetComponent<Fall>();
+
+        Collider2D col = parentObject.GetComponent<Collider2D>();
         
         if (collision.gameObject.tag == "ground")
         {
             if (parentScript != null)
             {
+                parentScript.fallSpeed = 0;
                 Debug.Log("Fall destroyed");
-                // Destroy the ParentScript component on the parent object
+                // Destroy the ParentScript components
                 Destroy(parentRigidbody);
                 Destroy(parentScript);
+                Destroy(col);
                 if (spawner.hasSpawned)
                 {
                     spawner.SpawnPiece();
+                    spawner.hasSpawned = false;
                 }
+                
+              
 
 
             }
@@ -39,4 +46,5 @@ public class DestroyFall : MonoBehaviour
    
     }
     
+
 }

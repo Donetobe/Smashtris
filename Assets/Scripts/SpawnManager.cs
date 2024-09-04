@@ -9,7 +9,7 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        hasSpawned = true;
     }
 
     // Update is called once per frame
@@ -24,6 +24,6 @@ public class SpawnManager : MonoBehaviour
         int randomIndex = Random.Range(0, pieceList.Count);
         GameObject pieceToSpawn = pieceList[randomIndex];
         Instantiate(pieceToSpawn, transform.position, Quaternion.identity);
-        hasSpawned = false;
+        hasSpawned = true;
     }
 }
