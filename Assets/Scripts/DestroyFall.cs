@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class DestroyFall : MonoBehaviour
 {
+    private Quaternion initialRotation;
     private SpawnManager spawner;
 
     private void Start()
     {
         spawner = GameObject.Find("SpawnManager").GetComponent<SpawnManager>();
-        
+        initialRotation = transform.rotation;
+    }
+
+    private void LateUpdate()
+    {
+        transform.rotation = initialRotation;
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -36,20 +43,20 @@ public class DestroyFall : MonoBehaviour
                 Destroy(parentRigidbody);
                 Destroy(parentScript);
                 Destroy(col);
-
+                
                 foreach (Transform child in parentObject.transform)
                 {
                     child.gameObject.layer = 0;
                     child.gameObject.tag = "ground";
                 }
-
-
-
+                
+                
+                
             }
         }
 
    
     }
     
-
+    
 }
