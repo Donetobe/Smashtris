@@ -59,6 +59,7 @@ Transform:
   - {fileID: 7944088707622364805}
   - {fileID: 6216023734861700162}
   - {fileID: 6843636797604939564}
+  - {fileID: 7557653198142175356}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &94806242678670828
@@ -134,6 +135,10 @@ PrefabInstance:
       value: Tile
       objectReference: {fileID: 0}
     - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
       propertyPath: m_TagString
       value: ground
       objectReference: {fileID: 0}
@@ -178,7 +183,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4910016968786409674}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -196,7 +201,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &496948833830515868
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -315,6 +320,10 @@ PrefabInstance:
       value: Tile (2)
       objectReference: {fileID: 0}
     - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
       propertyPath: m_TagString
       value: ground
       objectReference: {fileID: 0}
@@ -359,7 +368,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5434313854426864626}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -377,7 +386,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &4905226618986317989
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -496,6 +505,10 @@ PrefabInstance:
       value: Tile (32)
       objectReference: {fileID: 0}
     - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
       propertyPath: m_TagString
       value: ground
       objectReference: {fileID: 0}
@@ -540,7 +553,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6315061926082867294}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -558,7 +571,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &5570512290593189697
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -677,6 +690,10 @@ PrefabInstance:
       value: Tile (28)
       objectReference: {fileID: 0}
     - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
       propertyPath: m_TagString
       value: ground
       objectReference: {fileID: 0}
@@ -721,7 +738,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6415903301774226343}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -739,7 +756,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &3620466798968146137
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -858,6 +875,10 @@ PrefabInstance:
       value: Tile (25)
       objectReference: {fileID: 0}
     - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
       propertyPath: m_TagString
       value: ground
       objectReference: {fileID: 0}
@@ -902,7 +923,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6383240878752223584}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -920,7 +941,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &1712248980958321491
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1039,6 +1060,10 @@ PrefabInstance:
       value: Tile (36)
       objectReference: {fileID: 0}
     - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
       propertyPath: m_TagString
       value: ground
       objectReference: {fileID: 0}
@@ -1083,7 +1108,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7343130143114989206}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1101,7 +1126,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &3893888828914758077
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1220,6 +1245,10 @@ PrefabInstance:
       value: Tile (33)
       objectReference: {fileID: 0}
     - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
       propertyPath: m_TagString
       value: ground
       objectReference: {fileID: 0}
@@ -1264,7 +1293,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7218959766412269840}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1282,7 +1311,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &7036393948114176849
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1401,6 +1430,10 @@ PrefabInstance:
       value: Tile (9)
       objectReference: {fileID: 0}
     - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
       propertyPath: m_TagString
       value: ground
       objectReference: {fileID: 0}
@@ -1445,7 +1478,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7430116209508659174}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1463,7 +1496,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &8435943706023607405
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1582,6 +1615,10 @@ PrefabInstance:
       value: Tile (20)
       objectReference: {fileID: 0}
     - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
       propertyPath: m_TagString
       value: ground
       objectReference: {fileID: 0}
@@ -1626,7 +1663,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7706562933017532008}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1644,7 +1681,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &3610386782171204102
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1763,6 +1800,10 @@ PrefabInstance:
       value: Tile (35)
       objectReference: {fileID: 0}
     - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
       propertyPath: m_TagString
       value: ground
       objectReference: {fileID: 0}
@@ -1807,7 +1848,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8617768028996825449}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1825,7 +1866,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &369931704280256048
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1944,6 +1985,10 @@ PrefabInstance:
       value: Tile (6)
       objectReference: {fileID: 0}
     - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
       propertyPath: m_TagString
       value: ground
       objectReference: {fileID: 0}
@@ -1988,7 +2033,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9059094658833604102}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -2006,7 +2051,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &4707820099329727732
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2125,6 +2170,10 @@ PrefabInstance:
       value: Tile (4)
       objectReference: {fileID: 0}
     - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
       propertyPath: m_TagString
       value: ground
       objectReference: {fileID: 0}
@@ -2169,7 +2218,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9128681230405728890}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -2187,7 +2236,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &5367896100514051645
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2306,6 +2355,10 @@ PrefabInstance:
       value: Tile (31)
       objectReference: {fileID: 0}
     - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
       propertyPath: m_TagString
       value: ground
       objectReference: {fileID: 0}
@@ -2350,7 +2403,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8865349335782977810}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -2368,7 +2421,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &6413825511164416528
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2487,6 +2540,10 @@ PrefabInstance:
       value: Tile (8)
       objectReference: {fileID: 0}
     - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
       propertyPath: m_TagString
       value: ground
       objectReference: {fileID: 0}
@@ -2531,7 +2588,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8838732773579216839}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -2549,7 +2606,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &165328199388371732
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2668,6 +2725,10 @@ PrefabInstance:
       value: Tile (30)
       objectReference: {fileID: 0}
     - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
       propertyPath: m_TagString
       value: ground
       objectReference: {fileID: 0}
@@ -2707,7 +2768,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 557614495521636472}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -2725,7 +2786,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &3300190409880285579
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2849,6 +2910,10 @@ PrefabInstance:
       value: Tile (26)
       objectReference: {fileID: 0}
     - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
       propertyPath: m_TagString
       value: ground
       objectReference: {fileID: 0}
@@ -2888,7 +2953,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 249469515794541388}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -2906,7 +2971,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &3213490436240857925
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3030,6 +3095,10 @@ PrefabInstance:
       value: Tile (38)
       objectReference: {fileID: 0}
     - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
       propertyPath: m_TagString
       value: ground
       objectReference: {fileID: 0}
@@ -3069,7 +3138,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 147371931373703642}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -3087,7 +3156,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &8720898076053194156
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3211,6 +3280,10 @@ PrefabInstance:
       value: Tile (34)
       objectReference: {fileID: 0}
     - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
       propertyPath: m_TagString
       value: ground
       objectReference: {fileID: 0}
@@ -3250,7 +3323,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1070145662071616644}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -3268,7 +3341,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &5483362919038110740
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3392,6 +3465,10 @@ PrefabInstance:
       value: Tile (22)
       objectReference: {fileID: 0}
     - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
       propertyPath: m_TagString
       value: ground
       objectReference: {fileID: 0}
@@ -3431,7 +3508,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1066436548739185531}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -3449,7 +3526,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &4766086472608352220
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3573,6 +3650,10 @@ PrefabInstance:
       value: Tile (29)
       objectReference: {fileID: 0}
     - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
       propertyPath: m_TagString
       value: ground
       objectReference: {fileID: 0}
@@ -3612,7 +3693,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 587615773324717707}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -3630,7 +3711,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &4650113055890611367
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3754,6 +3835,10 @@ PrefabInstance:
       value: Tile (39)
       objectReference: {fileID: 0}
     - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
       propertyPath: m_TagString
       value: ground
       objectReference: {fileID: 0}
@@ -3793,7 +3878,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 770443405522651828}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -3811,7 +3896,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &886894883362435762
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3935,6 +4020,10 @@ PrefabInstance:
       value: Tile (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
       propertyPath: m_TagString
       value: ground
       objectReference: {fileID: 0}
@@ -3974,7 +4063,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1463143872923465148}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -3992,7 +4081,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &2380804616941745734
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4116,6 +4205,10 @@ PrefabInstance:
       value: Tile (5)
       objectReference: {fileID: 0}
     - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
       propertyPath: m_TagString
       value: ground
       objectReference: {fileID: 0}
@@ -4155,7 +4248,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1512751567561137777}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -4173,7 +4266,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &6923754438348360120
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4297,6 +4390,10 @@ PrefabInstance:
       value: Tile (23)
       objectReference: {fileID: 0}
     - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
       propertyPath: m_TagString
       value: ground
       objectReference: {fileID: 0}
@@ -4336,7 +4433,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2278878369786710885}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -4354,7 +4451,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &7523595247818307506
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4478,6 +4575,10 @@ PrefabInstance:
       value: Tile (3)
       objectReference: {fileID: 0}
     - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
       propertyPath: m_TagString
       value: ground
       objectReference: {fileID: 0}
@@ -4517,7 +4618,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1822838853237966489}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -4535,7 +4636,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &3289533177750527118
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4659,6 +4760,10 @@ PrefabInstance:
       value: Tile (7)
       objectReference: {fileID: 0}
     - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
       propertyPath: m_TagString
       value: ground
       objectReference: {fileID: 0}
@@ -4698,7 +4803,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1984790182436834416}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -4716,7 +4821,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &5075160119825218232
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4840,6 +4945,10 @@ PrefabInstance:
       value: Tile (27)
       objectReference: {fileID: 0}
     - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
       propertyPath: m_TagString
       value: ground
       objectReference: {fileID: 0}
@@ -4879,7 +4988,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3493055845198714808}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -4897,7 +5006,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &395127194986626958
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5021,6 +5130,10 @@ PrefabInstance:
       value: Tile (21)
       objectReference: {fileID: 0}
     - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
       propertyPath: m_TagString
       value: ground
       objectReference: {fileID: 0}
@@ -5060,7 +5173,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3711342538425357430}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -5078,7 +5191,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &1726920940889753123
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5202,6 +5315,10 @@ PrefabInstance:
       value: Tile (24)
       objectReference: {fileID: 0}
     - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
       propertyPath: m_TagString
       value: ground
       objectReference: {fileID: 0}
@@ -5241,7 +5358,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3607305992147569341}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -5259,7 +5376,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &6694618269382212345
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5309,6 +5426,192 @@ BoxCollider2D:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1241694936144670910, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
   m_PrefabInstance: {fileID: 8609908447785613211}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8780136349351413954
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6869749871937153270}
+    m_Modifications:
+    - target: {fileID: -3636587286461694250, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Mass
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: -3636587286461694250, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3636587286461694250, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3636587286461694250, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3636587286461694250, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241694936144670910, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241694936144670910, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -17.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241694936144670910, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241694936144670910, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241694936144670910, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241694936144670910, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241694936144670910, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241694936144670910, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241694936144670910, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241694936144670910, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Name
+      value: Tile (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 7565840396080650165, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.509434
+      objectReference: {fileID: 0}
+    - target: {fileID: 7565840396080650165, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Color.g
+      value: 0.509434
+      objectReference: {fileID: 0}
+    - target: {fileID: 7565840396080650165, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.509434
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 566018466095299868, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3108563823672057321}
+    - targetCorrespondingSourceObject: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7005681590756808030}
+  m_SourcePrefab: {fileID: 100100000, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+--- !u!1 &4371443621756106212 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+  m_PrefabInstance: {fileID: 8780136349351413954}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &3108563823672057321
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4371443621756106212}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 7
+--- !u!61 &7005681590756808030
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4371443621756106212}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &7557653198142175356 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1241694936144670910, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+  m_PrefabInstance: {fileID: 8780136349351413954}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9152563901387773499
 PrefabInstance:
@@ -5383,6 +5686,10 @@ PrefabInstance:
       value: Tile (37)
       objectReference: {fileID: 0}
     - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5004400432030514470, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
       propertyPath: m_TagString
       value: ground
       objectReference: {fileID: 0}
@@ -5422,7 +5729,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4212910526569999133}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -5440,7 +5747,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!61 &4762882390001870635
 BoxCollider2D:
   m_ObjectHideFlags: 0

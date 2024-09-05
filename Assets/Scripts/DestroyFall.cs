@@ -28,16 +28,21 @@ public class DestroyFall : MonoBehaviour
                 parentScript.fallSpeed = 0;
                 Debug.Log("Fall destroyed");
                 // Destroy the ParentScript components
-                Destroy(parentRigidbody);
-                Destroy(parentScript);
-                Destroy(col);
                 if (spawner.hasSpawned)
                 {
                     spawner.SpawnPiece();
                     spawner.hasSpawned = false;
                 }
-                
-              
+                Destroy(parentRigidbody);
+                Destroy(parentScript);
+                Destroy(col);
+
+                foreach (Transform child in parentObject.transform)
+                {
+                    child.gameObject.layer = 0;
+                    child.gameObject.tag = "ground";
+                }
+
 
 
             }
