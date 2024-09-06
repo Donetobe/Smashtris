@@ -30,16 +30,13 @@ public class DestroyFall : MonoBehaviour
         
         if (collision.gameObject.tag == "ground")
         {
+            spawner.hasSpawned = false;
             if (parentScript != null)
             {
                 parentScript.fallSpeed = 0;
                 Debug.Log("Fall destroyed");
                 // Destroy the ParentScript components
-                if (spawner.hasSpawned)
-                {
-                    spawner.SpawnPiece();
-                    spawner.hasSpawned = false;
-                }
+        
                 Destroy(parentRigidbody);
                 Destroy(parentScript);
                 Destroy(col);
