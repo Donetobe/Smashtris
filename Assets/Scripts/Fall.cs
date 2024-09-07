@@ -22,7 +22,7 @@ public class Fall : MonoBehaviour
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        mask = LayerMask.GetMask("Default");
+        mask = LayerMask.GetMask("ground");
     }
 
 
@@ -50,16 +50,16 @@ public class Fall : MonoBehaviour
             foreach (Transform child in transform)
             {
                 Vector2 childPosition = child.position;
+                childPosition.x += 1;
 
-                RaycastHit2D hit = Physics2D.Raycast(childPosition, Vector2.right, 1.5f, mask);
-
-                float distance = Mathf.Abs(hit.point.x - childPosition.x);
-
+                Debug.DrawRay(childPosition, Vector2.right, Color.white, 4f);
                 
-                if (distance == 1)
+                RaycastHit2D hit = Physics2D.Raycast(childPosition, Vector2.right, 0.1f, mask);
+
+                //If something was hit.
+                if (hit.collider != null)
                 {
-                    Debug.Log("RAYHIT");
-                    
+                    canMove = false;
                 }
             }
             if (canMove)
@@ -78,18 +78,18 @@ public class Fall : MonoBehaviour
             foreach (Transform child in transform)
             {
                 Vector2 childPosition = child.position;
+                childPosition.x -= 1;
 
-                RaycastHit2D hit = Physics2D.Raycast(childPosition, Vector2.left, 1.5f, mask);
+                Debug.DrawRay(childPosition, Vector2.left, Color.white, 4f);
 
-                float distance = Mathf.Abs(hit.point.x - childPosition.x);
+                RaycastHit2D hit = Physics2D.Raycast(childPosition, Vector2.left, 0.1f, mask);
 
-                
-                if (distance == 1)
+
+                //If something was hit.
+                if (hit.collider != null)
                 {
-                    Debug.Log("RAYHIT");
-                    
+                    canMove = false;
                 }
-                
             }
             if (canMove)
             {
@@ -127,15 +127,17 @@ public class Fall : MonoBehaviour
       
 
 
-            if (childPosition.x > 9)
+            if (childPosition.x > 8)
             {
                 newPosition += Vector2.left * sidewaysSpeed;
                 transform.position = newPosition;
+               
             }
-            else if (childPosition.x < -9)
+            else if (childPosition.x < -8)
             {
                 newPosition += Vector2.right * sidewaysSpeed;
                 transform.position = newPosition;
+                
             }
        
 

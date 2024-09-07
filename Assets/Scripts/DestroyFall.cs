@@ -34,7 +34,7 @@ public class DestroyFall : MonoBehaviour
             if (parentScript != null)
             {
                 parentScript.fallSpeed = 0;
-                Debug.Log("Fall destroyed");
+               // Debug.Log("Fall destroyed");
                 // Destroy the ParentScript components
         
                 Destroy(parentRigidbody);
@@ -43,7 +43,7 @@ public class DestroyFall : MonoBehaviour
                 
                 foreach (Transform child in parentObject.transform)
                 {
-                    child.gameObject.layer = 0;
+                    child.gameObject.layer = 3;
                     child.gameObject.tag = "ground";
                 }
                 
