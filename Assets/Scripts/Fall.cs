@@ -128,13 +128,13 @@ public class Fall : MonoBehaviour
       
 
 
-            if (childPosition.x > 8)
+            if (childPosition.x > 7)
             {
                 newPosition += Vector2.left * sidewaysSpeed;
                 transform.position = newPosition;
                
             }
-            else if (childPosition.x < -8)
+            else if (childPosition.x < -7)
             {
                 newPosition += Vector2.right * sidewaysSpeed;
                 transform.position = newPosition;

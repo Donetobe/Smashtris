@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 
 public class DestroyFall : MonoBehaviour
 {
     private Quaternion initialRotation;
     private SpawnManager spawner;
-    private int weight = 1;
+    private int row;
 
 
 
@@ -51,9 +52,15 @@ public class DestroyFall : MonoBehaviour
 
                     child.gameObject.layer = 3;
                     child.gameObject.tag = "ground";
-                    Debug.Log("collided "+ child.name);
-                    dedectCrumble();
+                    
+
+                    for (int i = -8; i == child.transform.position.x; i++)
+                    {
+
+                    }
+
                 }
+
 
                 Destroy(parentRigidbody);
                 Destroy(parentScript);
@@ -66,14 +73,6 @@ public class DestroyFall : MonoBehaviour
 
     }
     
-    void dedectCrumble()
-    {
     
-        Vector2 position = transform.position;
-        position.y -= 1;
-
-        RaycastHit2D hit = Physics2D.Raycast(position, Vector2.down, 0.1f);
-        Debug.DrawRay(position, Vector2.down, Color.white, 4f);
-    }
     
 }
