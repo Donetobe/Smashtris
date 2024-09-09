@@ -6,17 +6,24 @@ public class DestroyFall : MonoBehaviour
 {
     private Quaternion initialRotation;
     private SpawnManager spawner;
+    private int weight = 1;
+
+
+
 
     private void Start()
     {
         spawner = GameObject.Find("SpawnManager").GetComponent<SpawnManager>();
         initialRotation = transform.rotation;
+    
     }
 
     private void LateUpdate()
     {
         transform.rotation = initialRotation;
 
+        
+       
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -36,24 +43,37 @@ public class DestroyFall : MonoBehaviour
                 parentScript.fallSpeed = 0;
                // Debug.Log("Fall destroyed");
                 // Destroy the ParentScript components
-        
-                Destroy(parentRigidbody);
-                Destroy(parentScript);
-                Destroy(col);
+                
+     
                 
                 foreach (Transform child in parentObject.transform)
                 {
+
                     child.gameObject.layer = 3;
                     child.gameObject.tag = "ground";
+                    Debug.Log("collided "+ child.name);
+                    dedectCrumble();
                 }
-                
-                
-                
+
+                Destroy(parentRigidbody);
+                Destroy(parentScript);
+                Destroy(col);
             }
+           
         }
 
-   
+       
+
     }
     
+    void dedectCrumble()
+    {
+    
+        Vector2 position = transform.position;
+        position.y -= 1;
+
+        RaycastHit2D hit = Physics2D.Raycast(position, Vector2.down, 0.1f);
+        Debug.DrawRay(position, Vector2.down, Color.white, 4f);
+    }
     
 }

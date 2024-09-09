@@ -7,7 +7,7 @@ public class Fall : MonoBehaviour
     public float fallSpeed = 1f;
 
     public float sidewaysSpeed = 1;
-
+    
   
     private List<Vector2> childPositions = new List<Vector2>();
     private Vector2 newPosition;
@@ -23,6 +23,7 @@ public class Fall : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         mask = LayerMask.GetMask("ground");
+        
     }
 
 
@@ -52,7 +53,7 @@ public class Fall : MonoBehaviour
                 Vector2 childPosition = child.position;
                 childPosition.x += 1;
 
-                Debug.DrawRay(childPosition, Vector2.right, Color.white, 4f);
+               
                 
                 RaycastHit2D hit = Physics2D.Raycast(childPosition, Vector2.right, 0.1f, mask);
 
@@ -80,7 +81,7 @@ public class Fall : MonoBehaviour
                 Vector2 childPosition = child.position;
                 childPosition.x -= 1;
 
-                Debug.DrawRay(childPosition, Vector2.left, Color.white, 4f);
+                
 
                 RaycastHit2D hit = Physics2D.Raycast(childPosition, Vector2.left, 0.1f, mask);
 
