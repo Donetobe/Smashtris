@@ -123,6 +123,67 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &52605169
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1965992963}
+    m_Modifications:
+    - target: {fileID: 2431850995601590268, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
+      propertyPath: m_Name
+      value: CrumbleDetector -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230052640741678710, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
+      propertyPath: m_UseFullKinematicContacts
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4819187418283815657, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4819187418283815657, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.7999992
+      objectReference: {fileID: 0}
+    - target: {fileID: 4819187418283815657, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.06558889
+      objectReference: {fileID: 0}
+    - target: {fileID: 4819187418283815657, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4819187418283815657, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4819187418283815657, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4819187418283815657, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4819187418283815657, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4819187418283815657, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4819187418283815657, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
 --- !u!1001 &96813838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -133,7 +194,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2431850995601590268, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
       propertyPath: m_Name
-      value: CrumbleDetector (9)
+      value: CrumbleDetector 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230052640741678710, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
+      propertyPath: m_UseFullKinematicContacts
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4819187418283815657, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
       propertyPath: m_LocalPosition.x
@@ -305,7 +370,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2431850995601590268, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
       propertyPath: m_Name
-      value: CrumbleDetector (6)
+      value: CrumbleDetector -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230052640741678710, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
+      propertyPath: m_UseFullKinematicContacts
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4819187418283815657, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
       propertyPath: m_LocalPosition.x
@@ -367,7 +436,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2431850995601590268, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
       propertyPath: m_Name
-      value: CrumbleDetector (4)
+      value: CrumbleDetector -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230052640741678710, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
+      propertyPath: m_UseFullKinematicContacts
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4819187418283815657, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
       propertyPath: m_LocalPosition.x
@@ -521,7 +594,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2431850995601590268, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
       propertyPath: m_Name
-      value: CrumbleDetector (14)
+      value: CrumbleDetector 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230052640741678710, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
+      propertyPath: m_UseFullKinematicContacts
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4819187418283815657, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
       propertyPath: m_LocalPosition.x
@@ -573,6 +650,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4819187418283815657, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
   m_PrefabInstance: {fileID: 589575634}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &744525387 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4819187418283815657, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
+  m_PrefabInstance: {fileID: 52605169}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &765880905
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -583,7 +665,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2431850995601590268, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
       propertyPath: m_Name
-      value: CrumbleDetector (11)
+      value: CrumbleDetector 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230052640741678710, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
+      propertyPath: m_UseFullKinematicContacts
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4819187418283815657, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
       propertyPath: m_LocalPosition.x
@@ -645,7 +731,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2431850995601590268, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
       propertyPath: m_Name
-      value: CrumbleDetector (10)
+      value: CrumbleDetector 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230052640741678710, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
+      propertyPath: m_UseFullKinematicContacts
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4819187418283815657, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
       propertyPath: m_LocalPosition.x
@@ -707,7 +797,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2431850995601590268, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
       propertyPath: m_Name
-      value: CrumbleDetector (5)
+      value: CrumbleDetector -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230052640741678710, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
+      propertyPath: m_UseFullKinematicContacts
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4819187418283815657, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
       propertyPath: m_LocalPosition.x
@@ -769,7 +863,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2431850995601590268, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
       propertyPath: m_Name
-      value: CrumbleDetector (7)
+      value: CrumbleDetector 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230052640741678710, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
+      propertyPath: m_UseFullKinematicContacts
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4819187418283815657, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
       propertyPath: m_LocalPosition.x
@@ -831,7 +929,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2431850995601590268, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
       propertyPath: m_Name
-      value: CrumbleDetector (1)
+      value: CrumbleDetector -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230052640741678710, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
+      propertyPath: m_UseFullKinematicContacts
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4819187418283815657, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
       propertyPath: m_LocalPosition.x
@@ -893,7 +995,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2431850995601590268, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
       propertyPath: m_Name
-      value: CrumbleDetector (12)
+      value: CrumbleDetector 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230052640741678710, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
+      propertyPath: m_UseFullKinematicContacts
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4819187418283815657, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1039,7 +1145,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2431850995601590268, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
       propertyPath: m_Name
-      value: CrumbleDetector (8)
+      value: CrumbleDetector 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230052640741678710, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
+      propertyPath: m_UseFullKinematicContacts
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4819187418283815657, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1101,7 +1211,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2431850995601590268, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
       propertyPath: m_Name
-      value: CrumbleDetector (15)
+      value: CrumbleDetector 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230052640741678710, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
+      propertyPath: m_UseFullKinematicContacts
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4819187418283815657, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1163,7 +1277,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2431850995601590268, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
       propertyPath: m_Name
-      value: CrumbleDetector (13)
+      value: CrumbleDetector 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230052640741678710, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
+      propertyPath: m_UseFullKinematicContacts
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4819187418283815657, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1225,7 +1343,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2431850995601590268, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
       propertyPath: m_Name
-      value: CrumbleDetector (3)
+      value: CrumbleDetector -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230052640741678710, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
+      propertyPath: m_UseFullKinematicContacts
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4819187418283815657, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1310,6 +1432,7 @@ Transform:
   - {fileID: 2760407192038230732}
   - {fileID: 1261968480}
   - {fileID: 2015184360}
+  - {fileID: 744525387}
   - {fileID: 1930899108}
   - {fileID: 471007493}
   - {fileID: 995166444}
@@ -1347,7 +1470,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2431850995601590268, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
       propertyPath: m_Name
-      value: CrumbleDetector (2)
+      value: CrumbleDetector -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230052640741678710, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
+      propertyPath: m_UseFullKinematicContacts
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4819187418283815657, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1409,7 +1536,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2431850995601590268, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
       propertyPath: m_Name
-      value: CrumbleDetector
+      value: CrumbleDetector -8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2431850995601590268, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230052640741678710, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
+      propertyPath: m_UseFullKinematicContacts
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4819187418283815657, guid: 7e63c53aa6ed730429aae9be4c750b71, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1513,7 +1648,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8503201920276729822, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 5011397992408147600, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 7577193058027071452, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 1554480593947432630, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 1875808474046871621, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 5415097788387468649, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 2474243626461249910, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 1250276126185258370, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 5384694862624049070, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 2314899690137361523, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 8709014556751904934, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 7818252828472732852, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 820661149372715095, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 6432577434008964412, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 8444961663000918312, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 459847826473542514, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 6200461473894100484, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 4445091314207149795, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 1026077495971653549, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 2492402744325580513, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 6783490016493950859, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 5888850385392990584, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 42530589280625748, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 7631090770560221259, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 6550640022533586111, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 75176450045347475, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 7751115964949912910, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 3705883596831654299, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 2824126821894794633, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 4671008039605457258, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 1365796849984867329, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 4504677167523198997, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 5607235311018877519, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 2142909937662930745, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
     m_RemovedGameObjects:
     - {fileID: 1984790182436834416, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
     - {fileID: 8838732773579216839, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}

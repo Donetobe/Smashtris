@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Collections.LowLevel.Unsafe;
+using UnityEditor.PackageManager;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DestroyFall : MonoBehaviour
 {
@@ -9,14 +11,14 @@ public class DestroyFall : MonoBehaviour
     private SpawnManager spawner;
     private int row;
 
-
+    LayerMask mask;
 
 
     private void Start()
     {
         spawner = GameObject.Find("SpawnManager").GetComponent<SpawnManager>();
         initialRotation = transform.rotation;
-    
+        mask = LayerMask.GetMask("Detector", "ground");
     }
 
     private void LateUpdate()
@@ -38,15 +40,21 @@ public class DestroyFall : MonoBehaviour
         
         if (collision.gameObject.tag == "ground")
         {
+
+            
             spawner.hasSpawned = false;
             if (parentScript != null)
             {
+
                 parentScript.fallSpeed = 0;
-               // Debug.Log("Fall destroyed");
+                // Debug.Log("Fall destroyed");
                 // Destroy the ParentScript components
-                
-     
-                
+
+                Destroy(parentRigidbody);
+                Destroy(parentScript);
+                Destroy(col);
+
+
                 foreach (Transform child in parentObject.transform)
                 {
 
@@ -54,25 +62,33 @@ public class DestroyFall : MonoBehaviour
                     child.gameObject.tag = "ground";
                     
 
-                    for (int i = -8; i == child.transform.position.x; i++)
-                    {
-
-                    }
-
                 }
 
 
-                Destroy(parentRigidbody);
-                Destroy(parentScript);
-                Destroy(col);
+              
             }
-           
+
+            dedectCrumble();
         }
 
-       
+        
 
     }
+
+    void dedectCrumble()
+    {
+
+        Vector2 position = transform.position;
+        position.y += 1;
+
+        RaycastHit2D hit = Physics2D.Raycast(position, Vector2.up, 100f, mask);
+
     
-    
-    
+
+        
+        Debug.DrawRay(position, Vector2.up, Color.white, 4f);
+
+        Debug.Log(hit.collider.name);
+    }
+
 }
