@@ -9,7 +9,7 @@ public class DestroyFall : MonoBehaviour
 {
     private Quaternion initialRotation;
     private SpawnManager spawner;
-    private int row;
+
 
     LayerMask mask;
 
@@ -77,18 +77,29 @@ public class DestroyFall : MonoBehaviour
 
     void dedectCrumble()
     {
-
+        
+        int weight = 1;
         Vector2 position = transform.position;
         position.y += 1;
 
         RaycastHit2D hit = Physics2D.Raycast(position, Vector2.up, 100f, mask);
 
-    
+        while (!hit.collider.CompareTag("Detector"))
+        {
+            position.y += 1;
+            weight++;
+            hit = Physics2D.Raycast(position, Vector2.up, 100f, mask);
+        }
+        CrumbleDetector crumbleManager;
 
-        
+        crumbleManager = hit.collider.gameObject.GetComponent<CrumbleDetector>();
+
+        crumbleManager.CheckIfCrumble(weight);
+
         Debug.DrawRay(position, Vector2.up, Color.white, 4f);
 
-        Debug.Log(hit.collider.name);
+      
+        
     }
 
 }

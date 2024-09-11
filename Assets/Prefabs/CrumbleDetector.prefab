@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4230052640741678710}
   m_Layer: 7
   m_Name: CrumbleDetector
-  m_TagString: Untagged
+  m_TagString: Detector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
