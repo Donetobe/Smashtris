@@ -10,7 +10,7 @@ public class DestroyFall : MonoBehaviour
     private Quaternion initialRotation;
     private SpawnManager spawner;
 
-
+   
     LayerMask mask;
 
 
@@ -60,15 +60,20 @@ public class DestroyFall : MonoBehaviour
 
                     child.gameObject.layer = 3;
                     child.gameObject.tag = "ground";
-                    
 
+                  
                 }
 
 
               
             }
 
-            dedectCrumble();
+            
+        
+                dedectCrumble();
+         
+          
+         
         }
 
         

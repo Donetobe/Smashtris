@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CrumbleDetector : MonoBehaviour
 {
-
+    bool didItCrumble = false;
     LayerMask mask;
     // Start is called before the first frame update
     void Start()
@@ -36,6 +36,12 @@ public class CrumbleDetector : MonoBehaviour
             hit = Physics2D.Raycast(position, Vector2.down, 0.1f, mask);
             ammountOfblocks++;
         }
+
+        if (ammountOfblocks - weight < weight)
+        {
+            didItCrumble = true;
+        }
+
 
         Debug.Log("The ammount of blocks " + ammountOfblocks);
     }
