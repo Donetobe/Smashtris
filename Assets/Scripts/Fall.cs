@@ -146,8 +146,4 @@ public class Fall : MonoBehaviour
         
     }
 
-    public void DetachCildren()
-    {
-
-    }
 }

@@ -1,24 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using Unity.Collections.LowLevel.Unsafe;
 using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class DestroyFall : MonoBehaviour
 {
     private Quaternion initialRotation;
     private SpawnManager spawner;
 
+    GameObject parentObject;
+    Rigidbody2D parentRigidbody;
+    Fall parentScript;
+    Collider2D col;
+
+    public bool didItStop = false;
 
     LayerMask mask;
-
 
     private void Start()
     {
         spawner = GameObject.Find("SpawnManager").GetComponent<SpawnManager>();
         initialRotation = transform.rotation;
         mask = LayerMask.GetMask("Detector", "ground");
+        parentObject = transform.parent.gameObject;
+        parentRigidbody = parentObject.GetComponent<Rigidbody2D>();
+        parentScript = parentObject.GetComponent<Fall>();
+        col = parentObject.GetComponent<Collider2D>();
     }
 
     private void LateUpdate()
@@ -31,21 +42,26 @@ public class DestroyFall : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Access the parent object
-    
-    
-       
- 
-        
-        if (collision.gameObject.tag == "ground")
+   
+
+
+
+
+        if (collision.gameObject.tag == "ground" && !didItStop)
         {
-            dedectCrumble();
+            if (collision.gameObject.layer == LayerMask.NameToLayer("ground"))
+            {
+                DestroyFall hitObject;
 
-            GameObject parentObject = transform.parent.gameObject;
-            Rigidbody2D parentRigidbody = parentObject.GetComponent<Rigidbody2D>();
-            // Access the specific script on the parent object
-            Fall parentScript = parentObject.GetComponent<Fall>();
+                hitObject = collision.gameObject.GetComponent<DestroyFall>();
 
-            Collider2D col = parentObject.GetComponent<Collider2D>();
+                hitObject.didItStop = true;
+
+            }
+
+        
+
+
 
             spawner.hasSpawned = false;
             if (parentScript != null)
@@ -59,16 +75,18 @@ public class DestroyFall : MonoBehaviour
               
 
 
-                foreach (Transform child in parentObject.transform)
-                {
+              
+                    int childCount = parentObject.transform.childCount;
 
-                    child.gameObject.layer = 3;
-                    child.gameObject.tag = "ground";
-                    child.SetParent(null);
+                    for (int i = childCount - 1; i >= 0; i--)
+                    {
+                        Transform child1 = parentObject.transform.GetChild(i);
+                        child1.SetParent(null);
+                        child1.gameObject.layer = 3;
+                        child1.gameObject.tag = "ground";
+                        
+                    }
 
-
-
-                }
 
 
               
@@ -76,6 +94,8 @@ public class DestroyFall : MonoBehaviour
 
 
 
+            didItStop = true;
+            dedectCrumble();
             Destroy(parentRigidbody);
             Destroy(parentScript);
             Destroy(col);
@@ -92,7 +112,7 @@ public class DestroyFall : MonoBehaviour
 
     void dedectCrumble()
     {
-        Debug.Log("Raysent");
+       
         int weight = 1;
         Vector2 position = transform.position;
         position.y += 1;
@@ -109,7 +129,12 @@ public class DestroyFall : MonoBehaviour
 
         crumbleManager = hit.collider.gameObject.GetComponent<CrumbleDetector>();
 
-        crumbleManager.CheckIfCrumble(weight);
+     
+
+      
+            crumbleManager.CheckIfCrumble(weight);
+       
+       
 
         Debug.DrawRay(position, Vector2.up, Color.white, 4f);
 

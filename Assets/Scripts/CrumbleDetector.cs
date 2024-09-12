@@ -6,11 +6,13 @@ using UnityEngine.UI;
 public class CrumbleDetector : MonoBehaviour
 {
     bool didItCrumble = false;
+  
     LayerMask mask;
     // Start is called before the first frame update
     void Start()
     {
         mask = LayerMask.GetMask("ground");
+       
     }
 
     // Update is called once per frame
@@ -47,5 +49,6 @@ public class CrumbleDetector : MonoBehaviour
 
 
         Debug.Log("The ammount of blocks " + ammountOfblocks);
+      
     }
 }
