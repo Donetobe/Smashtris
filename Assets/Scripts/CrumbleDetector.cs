@@ -31,8 +31,11 @@ public class CrumbleDetector : MonoBehaviour
         while (hit.collider != null)
         {
 
-            position.y = hit.collider.transform.position.y - 1;
         
+
+
+            position.y = hit.collider.transform.position.y - 1;
+            
             hit = Physics2D.Raycast(position, Vector2.down, 0.1f, mask);
             ammountOfblocks++;
         }

@@ -10,7 +10,7 @@ public class DestroyFall : MonoBehaviour
     private Quaternion initialRotation;
     private SpawnManager spawner;
 
-   
+
     LayerMask mask;
 
 
@@ -31,17 +31,22 @@ public class DestroyFall : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // Access the parent object
-        GameObject parentObject = transform.parent.gameObject;
-        Rigidbody2D parentRigidbody = parentObject.GetComponent<Rigidbody2D>();
-        // Access the specific script on the parent object
-        Fall parentScript = parentObject.GetComponent<Fall>();
-
-        Collider2D col = parentObject.GetComponent<Collider2D>();
+    
+    
+       
+ 
         
         if (collision.gameObject.tag == "ground")
         {
+            dedectCrumble();
 
-            
+            GameObject parentObject = transform.parent.gameObject;
+            Rigidbody2D parentRigidbody = parentObject.GetComponent<Rigidbody2D>();
+            // Access the specific script on the parent object
+            Fall parentScript = parentObject.GetComponent<Fall>();
+
+            Collider2D col = parentObject.GetComponent<Collider2D>();
+
             spawner.hasSpawned = false;
             if (parentScript != null)
             {
@@ -50,9 +55,8 @@ public class DestroyFall : MonoBehaviour
                 // Debug.Log("Fall destroyed");
                 // Destroy the ParentScript components
 
-                Destroy(parentRigidbody);
-                Destroy(parentScript);
-                Destroy(col);
+                
+              
 
 
                 foreach (Transform child in parentObject.transform)
@@ -60,17 +64,23 @@ public class DestroyFall : MonoBehaviour
 
                     child.gameObject.layer = 3;
                     child.gameObject.tag = "ground";
+                    child.SetParent(null);
 
-                  
+
+
                 }
 
 
               
             }
 
-            
+
+
+            Destroy(parentRigidbody);
+            Destroy(parentScript);
+            Destroy(col);
+       
         
-                dedectCrumble();
          
           
          
@@ -82,7 +92,7 @@ public class DestroyFall : MonoBehaviour
 
     void dedectCrumble()
     {
-        
+        Debug.Log("Raysent");
         int weight = 1;
         Vector2 position = transform.position;
         position.y += 1;
