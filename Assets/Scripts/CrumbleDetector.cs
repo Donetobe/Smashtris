@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CrumbleDetector : MonoBehaviour
 {
     bool didItCrumble = false;
-  
+    private List<GameObject> fallList = new List<GameObject>();
     LayerMask mask;
     // Start is called before the first frame update
     void Start()
@@ -29,11 +29,13 @@ public class CrumbleDetector : MonoBehaviour
         
 
         RaycastHit2D hit = Physics2D.Raycast(position, Vector2.down, 100f, mask);
+      
+        
 
         while (hit.collider != null)
         {
+            fallList.Add(hit.collider.gameObject);
 
-        
 
 
             position.y = hit.collider.transform.position.y - 1;
@@ -41,14 +43,39 @@ public class CrumbleDetector : MonoBehaviour
             hit = Physics2D.Raycast(position, Vector2.down, 0.1f, mask);
             ammountOfblocks++;
         }
-
+        
         if (ammountOfblocks - weight < weight)
         {
-            didItCrumble = true;
+            bool canCrumble = true;
+
+            foreach (var item in fallList)
+            {
+                Vector2 position1 = item.transform.position;
+                
+                if (position1.y - 1  < -17)
+                {
+                    canCrumble = false;
+                }
+         
+            }
+
+
+            foreach (var item in fallList)
+            {
+                Vector2 position1 = item.transform.position;
+
+                if (canCrumble)
+                {
+                    position1.y -= 1;
+                    Debug.Log("It fell");
+                    item.transform.position = position1;
+                }
+
+            }
         }
 
 
-        Debug.Log("The ammount of blocks " + ammountOfblocks);
+        Debug.Log("The ammount of blocks is " + ammountOfblocks + "And the weight is " + weight);
       
     }
 }
