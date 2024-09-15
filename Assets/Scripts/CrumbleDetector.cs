@@ -26,56 +26,76 @@ public class CrumbleDetector : MonoBehaviour
     {
         int ammountOfblocks = 0;
         Vector2 position = transform.position;
-        
-
-        RaycastHit2D hit = Physics2D.Raycast(position, Vector2.down, 100f, mask);
-      
-        
-
-        while (hit.collider != null)
+        bool loop = true;
+        while (loop)
         {
-            fallList.Add(hit.collider.gameObject);
+            RaycastHit2D hit = Physics2D.Raycast(position, Vector2.down, 100f, mask);
 
 
 
-            position.y = hit.collider.transform.position.y - 1;
-            
-            hit = Physics2D.Raycast(position, Vector2.down, 0.1f, mask);
-            ammountOfblocks++;
-        }
-        
-        if (ammountOfblocks - weight < weight)
-        {
-            bool canCrumble = true;
-
-            foreach (var item in fallList)
+            while (hit.collider != null)
             {
-                Vector2 position1 = item.transform.position;
-                
-                if (position1.y - 1  < -17)
+                fallList.Add(hit.collider.gameObject);
+
+
+
+                position.y = hit.collider.transform.position.y - 1;
+
+                hit = Physics2D.Raycast(position, Vector2.down, 0.1f, mask);
+                ammountOfblocks++;
+            }
+
+            if (ammountOfblocks - weight < weight)
+            {
+                StartCoroutine(ExampleCoroutine());
+                bool canCrumble = true;
+
+                foreach (var item in fallList)
                 {
-                    canCrumble = false;
+                    Vector2 position1 = item.transform.position;
+
+                    if (position1.y - 1 < -17)
+                    {
+                        canCrumble = false;
+                        loop = false;
+                    }
+                  
+
                 }
-         
+
+
+                foreach (var item in fallList)
+                {
+                    Vector2 position1 = item.transform.position;
+
+                    if (canCrumble)
+                    {
+                        position1.y -= 1;
+                        Debug.Log("It fell");
+                        item.transform.position = position1;
+                        
+                    }
+
+                }
+            }
+            else
+            {
+                loop = false;
             }
 
 
-            foreach (var item in fallList)
-            {
-                Vector2 position1 = item.transform.position;
-
-                if (canCrumble)
-                {
-                    position1.y -= 1;
-                    Debug.Log("It fell");
-                    item.transform.position = position1;
-                }
-
-            }
+            Debug.Log("The ammount of blocks is " + ammountOfblocks + "And the weight is " + weight);
         }
-
-
-        Debug.Log("The ammount of blocks is " + ammountOfblocks + "And the weight is " + weight);
+       
       
+    }
+
+    IEnumerator ExampleCoroutine()
+    {
+    
+        
+        yield return new WaitForSeconds(1);
+
+     
     }
 }

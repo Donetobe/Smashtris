@@ -112,7 +112,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -247,6 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f5c651819baa944d8ece0e5fa9d91b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  didItStop: 0
 --- !u!1001 &3555010264643883046
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -370,6 +371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f5c651819baa944d8ece0e5fa9d91b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  didItStop: 0
 --- !u!1001 &6844906643167835818
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -488,6 +490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f5c651819baa944d8ece0e5fa9d91b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  didItStop: 0
 --- !u!4 &5748454203898398228 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1241694936144670910, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
@@ -611,6 +614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f5c651819baa944d8ece0e5fa9d91b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  didItStop: 0
 --- !u!4 &7302346433114830486 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1241694936144670910, guid: b8c13a3e2137d8241bef715311fd46f2, type: 3}
