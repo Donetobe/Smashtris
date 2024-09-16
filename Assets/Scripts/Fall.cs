@@ -7,10 +7,11 @@ public class Fall : MonoBehaviour
     public float fallSpeed = 1f;
 
     public float sidewaysSpeed = 1;
-    
-  
+    private SpawnManager spawner;
+
     private List<Vector2> childPositions = new List<Vector2>();
     private Vector2 newPosition;
+    bool hasSpawned = false;
 
     private KeyCode moveRightKey = KeyCode.RightArrow; // Key to move right
     private KeyCode moveLeftKey = KeyCode.LeftArrow; // Key to move left
@@ -23,7 +24,7 @@ public class Fall : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         mask = LayerMask.GetMask("ground");
-        
+        spawner = GameObject.Find("SpawnManager").GetComponent<SpawnManager>();
     }
 
 
@@ -146,4 +147,22 @@ public class Fall : MonoBehaviour
         
     }
 
+    public void SpawnPiece()
+    {
+        if (!hasSpawned)
+        {
+            StartCoroutine(ExampleCoroutine());
+            spawner.SpawnPiece();
+            hasSpawned = true;
+        }
+   
+    }
+    IEnumerator ExampleCoroutine()
+    {
+
+
+        yield return new WaitForSeconds(2);
+
+
+    }
 }

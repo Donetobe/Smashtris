@@ -11,7 +11,7 @@ using UnityEngine.UIElements;
 public class DestroyFall : MonoBehaviour
 {
     private Quaternion initialRotation;
-    private SpawnManager spawner;
+ 
 
     GameObject parentObject;
     Rigidbody2D parentRigidbody;
@@ -24,7 +24,7 @@ public class DestroyFall : MonoBehaviour
 
     private void Start()
     {
-        spawner = GameObject.Find("SpawnManager").GetComponent<SpawnManager>();
+      
         initialRotation = transform.rotation;
         mask = LayerMask.GetMask("Detector", "ground");
         parentObject = transform.parent.gameObject;
@@ -60,11 +60,11 @@ public class DestroyFall : MonoBehaviour
 
             }
 
-        
+            parentScript.SpawnPiece();
 
 
 
-            spawner.hasSpawned = false;
+           
             if (parentScript != null)
             {
 

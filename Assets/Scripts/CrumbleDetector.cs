@@ -8,11 +8,12 @@ public class CrumbleDetector : MonoBehaviour
     bool didItCrumble = false;
     private List<GameObject> fallList = new List<GameObject>();
     LayerMask mask;
+    
     // Start is called before the first frame update
     void Start()
     {
         mask = LayerMask.GetMask("ground");
-       
+        
     }
 
     // Update is called once per frame
@@ -39,12 +40,12 @@ public class CrumbleDetector : MonoBehaviour
 
 
 
-                position.y = hit.collider.transform.position.y - 1;
+                position.y = hit.collider.transform.position.y - 0.9f;
 
                 hit = Physics2D.Raycast(position, Vector2.down, 0.1f, mask);
                 ammountOfblocks++;
             }
-
+            
             if (ammountOfblocks - weight < weight)
             {
                
@@ -57,13 +58,15 @@ public class CrumbleDetector : MonoBehaviour
 
                     if (position1.y - 1 < -17)
                     {
+                         
                         canCrumble = false;
                         loop = false;
+                         
                     }
                   
 
                 }
-
+                
 
                 foreach (var item in fallList)
                 {
@@ -87,6 +90,7 @@ public class CrumbleDetector : MonoBehaviour
 
 
             Debug.Log("The ammount of blocks is " + ammountOfblocks + "And the weight is " + weight);
+            
         }
        
       

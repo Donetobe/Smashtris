@@ -4,21 +4,18 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public bool hasSpawned;
+    
     public List<GameObject> pieceList;
     // Start is called before the first frame update
     void Start()
     {
-        hasSpawned = true;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (hasSpawned == false)
-        {
-            SpawnPiece();
-        }
+       
     }
 
     public void SpawnPiece()
@@ -27,6 +24,6 @@ public class SpawnManager : MonoBehaviour
         int randomIndex = Random.Range(0, pieceList.Count);
         GameObject pieceToSpawn = pieceList[randomIndex];
         Instantiate(pieceToSpawn, transform.position, Quaternion.identity);
-        hasSpawned = true;
+        
     }
 }
