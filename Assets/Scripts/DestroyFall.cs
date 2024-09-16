@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
+
 public class DestroyFall : MonoBehaviour
 {
     private Quaternion initialRotation;
@@ -84,7 +85,9 @@ public class DestroyFall : MonoBehaviour
                         child1.SetParent(null);
                         child1.gameObject.layer = 3;
                         child1.gameObject.tag = "ground";
-                        
+                       
+                        Vector2 temp = new Vector2(Mathf.Round(child1.transform.position.x * 10.0f) * 0.1f, Mathf.Round(child1.transform.position.y * 10.0f) * 0.1f);
+                        child1.transform.position = temp;
                     }
 
 

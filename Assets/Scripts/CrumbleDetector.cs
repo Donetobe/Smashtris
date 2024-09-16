@@ -47,7 +47,8 @@ public class CrumbleDetector : MonoBehaviour
 
             if (ammountOfblocks - weight < weight)
             {
-                StartCoroutine(ExampleCoroutine());
+               
+
                 bool canCrumble = true;
 
                 foreach (var item in fallList)
@@ -70,6 +71,7 @@ public class CrumbleDetector : MonoBehaviour
 
                     if (canCrumble)
                     {
+                        StartCoroutine(ExampleCoroutine());
                         position1.y -= 1;
                         Debug.Log("It fell");
                         item.transform.position = position1;
