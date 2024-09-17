@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class CrumbleDetector : MonoBehaviour
 {
@@ -34,7 +35,7 @@ public class CrumbleDetector : MonoBehaviour
 
 
 
-            while (hit.collider.transform.position.x > Pos.x)
+            while (hit.collider != null)
             {
                 fallList.Add(hit.collider.gameObject);
 
@@ -86,6 +87,7 @@ public class CrumbleDetector : MonoBehaviour
             else
             {
                 loop = false;
+                break;
             }
 
 
@@ -103,5 +105,23 @@ public class CrumbleDetector : MonoBehaviour
         yield return new WaitForSeconds(1);
 
      
+    }
+
+    void CheckIfCrumbleContinues()
+    {
+        int ammountOfblocks = 0;
+        RaycastHit2D hit = Physics2D.Raycast(fallList[fallList.Count - 1].gameObject.transform.position, Vector2.down, 1f, mask);
+        Vector2 position = transform.position;
+        while (hit.collider != null)
+        {
+            fallList.Add(hit.collider.gameObject);
+
+
+
+            position.y = hit.collider.transform.position.y - 0.9f;
+
+            hit = Physics2D.Raycast(position, Vector2.down, 0.1f, mask);
+            ammountOfblocks++;
+        }
     }
 }
