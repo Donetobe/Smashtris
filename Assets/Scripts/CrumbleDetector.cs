@@ -27,9 +27,8 @@ public class CrumbleDetector : MonoBehaviour
     {
         int ammountOfblocks = 0;
         Vector2 position = transform.position;
-        bool loop = true;
-        while (loop)
-        {
+       
+       
             RaycastHit2D hit = Physics2D.Raycast(position, Vector2.down, 100f, mask);
 
 
@@ -48,20 +47,47 @@ public class CrumbleDetector : MonoBehaviour
             
             if (ammountOfblocks - weight < weight)
             {
-
+                bool canCrumble = false;
                 foreach (var item in fallList)
                 {
-                    DestroyFall script = item.GetComponent<DestroyFall>();  
+                    Vector2 position1 = item.transform.position;
+                    DestroyFall script = item.GetComponent<DestroyFall>();
                     Rigidbody2D rb2d = item.GetComponent<Rigidbody2D>();
 
-                    item.gameObject.layer = 6;
-                    item.gameObject.tag = null;
-                    script.didItStop = false;
+
+                    if (position1.y - 1 > -17)
+                    {
+                
+
+                        item.gameObject.layer = 6;
+                        item.gameObject.tag = null;
+                        script.didItStop = false;
+                        canCrumble = true;
+                    }
+
+       
 
 
 
                 }
+                while (true)
+                {
+                    foreach (var item in fallList)
+                    {
+                        Vector2 position1 = item.transform.position;
 
+                        if (canCrumble)
+                        {
+                            StartCoroutine(ExampleCoroutine());
+                            position1.y -= 1;
+                            Debug.Log("It fell");
+                            item.transform.position = position1;
+
+                        }
+
+                    }
+                }
+               
 
                 /*
                 bool canCrumble = true;
@@ -99,17 +125,13 @@ public class CrumbleDetector : MonoBehaviour
                 position = fallList[fallList.Count - 1].gameObject.transform.position;
                 */
             }
-            else
-            {
-                loop = false;
-                break;
-            }
+       
 
 
             Debug.Log("The ammount of blocks is " + ammountOfblocks + "And the weight is " + weight);
 
        
-        }
+       
        
       
     }
