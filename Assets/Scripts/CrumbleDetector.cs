@@ -23,7 +23,7 @@ public class CrumbleDetector : MonoBehaviour
     }
 
 
-    public void CheckIfCrumble(int weight)
+    public void CheckIfCrumble(int weight, Vector2 Pos)
     {
         int ammountOfblocks = 0;
         Vector2 position = transform.position;
@@ -34,7 +34,7 @@ public class CrumbleDetector : MonoBehaviour
 
 
 
-            while (hit.collider != null)
+            while (hit.collider.transform.position.x > Pos.x)
             {
                 fallList.Add(hit.collider.gameObject);
 

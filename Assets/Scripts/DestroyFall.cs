@@ -115,7 +115,7 @@ public class DestroyFall : MonoBehaviour
 
     void dedectCrumble()
     {
-       
+       Vector2 OGPos = transform.position;
         int weight = 1;
         Vector2 position = transform.position;
         position.y += 1;
@@ -135,7 +135,7 @@ public class DestroyFall : MonoBehaviour
      
 
       
-            crumbleManager.CheckIfCrumble(weight);
+            crumbleManager.CheckIfCrumble(weight, OGPos);
        
        
 
