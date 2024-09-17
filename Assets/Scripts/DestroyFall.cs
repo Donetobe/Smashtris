@@ -17,7 +17,7 @@ public class DestroyFall : MonoBehaviour
     Rigidbody2D parentRigidbody;
     Fall parentScript;
     Collider2D col;
-
+    public bool hasAllReadyColided = false;
     public bool didItStop = false;
 
     LayerMask mask;
@@ -60,7 +60,7 @@ public class DestroyFall : MonoBehaviour
 
             }
 
-            parentScript.SpawnPiece();
+           
 
 
 
@@ -71,21 +71,23 @@ public class DestroyFall : MonoBehaviour
                 parentScript.fallSpeed = 0;
                 // Debug.Log("Fall destroyed");
                 // Destroy the ParentScript components
-
-                
-              
+                parentScript.SpawnPiece();
 
 
-              
-                    int childCount = parentObject.transform.childCount;
+
+
+
+                int childCount = parentObject.transform.childCount;
 
                     for (int i = childCount - 1; i >= 0; i--)
                     {
                         Transform child1 = parentObject.transform.GetChild(i);
+                        DestroyFall destroyFall = child1.GetComponent<DestroyFall>();
+                        destroyFall.hasAllReadyColided = true;
                         child1.SetParent(null);
                         child1.gameObject.layer = 3;
                         child1.gameObject.tag = "ground";
-                       
+                        
                         Vector2 temp = new Vector2(Mathf.Round(child1.transform.position.x * 10.0f) * 0.1f, Mathf.Round(child1.transform.position.y * 10.0f) * 0.1f);
                         child1.transform.position = temp;
                     }
@@ -93,6 +95,10 @@ public class DestroyFall : MonoBehaviour
 
 
               
+            }
+            else if (hasAllReadyColided)
+            {
+
             }
 
 
@@ -132,10 +138,10 @@ public class DestroyFall : MonoBehaviour
 
         crumbleManager = hit.collider.gameObject.GetComponent<CrumbleDetector>();
 
-     
+
 
       
-            crumbleManager.CheckIfCrumble(weight, OGPos);
+        crumbleManager.CheckIfCrumble(weight ,OGPos);
        
        
 

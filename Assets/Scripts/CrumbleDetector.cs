@@ -33,11 +33,11 @@ public class CrumbleDetector : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(position, Vector2.down, 100f, mask);
 
 
-
-            while (hit.collider.transform.position.x > Pos.x)
+            
+            while (hit.collider != null)
             {
                 fallList.Add(hit.collider.gameObject);
-
+                
 
 
                 position.y = hit.collider.transform.position.y - 0.9f;
@@ -48,8 +48,22 @@ public class CrumbleDetector : MonoBehaviour
             
             if (ammountOfblocks - weight < weight)
             {
-               
 
+                foreach (var item in fallList)
+                {
+                    DestroyFall script = item.GetComponent<DestroyFall>();  
+                    Rigidbody2D rb2d = item.GetComponent<Rigidbody2D>();
+
+                    item.gameObject.layer = 6;
+                    item.gameObject.tag = null;
+                    script.didItStop = false;
+
+
+
+                }
+
+
+                /*
                 bool canCrumble = true;
 
                 foreach (var item in fallList)
@@ -82,15 +96,19 @@ public class CrumbleDetector : MonoBehaviour
                     }
 
                 }
+                position = fallList[fallList.Count - 1].gameObject.transform.position;
+                */
             }
             else
             {
                 loop = false;
+                break;
             }
 
 
             Debug.Log("The ammount of blocks is " + ammountOfblocks + "And the weight is " + weight);
-            
+
+       
         }
        
       
