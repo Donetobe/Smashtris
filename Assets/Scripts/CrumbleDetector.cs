@@ -47,6 +47,10 @@ public class CrumbleDetector : MonoBehaviour
 
                 hit = Physics2D.Raycast(position, Vector2.down, 0.1f, mask);
                 ammountOfblocks++;
+                if (hit.collider == null)
+                {
+                    break;
+                }
             }
             
             if (ammountOfblocks - weight < weight && fallList[fallList.Count - 1].gameObject.transform.position.y != -16.5f)
@@ -77,22 +81,46 @@ public class CrumbleDetector : MonoBehaviour
                     }
                 }
 
-                if (hit.collider.gameObject.layer == 3)
+                while (true)
                 {
-                    Destroy(hit.collider.gameObject);
-                    foreach (GameObject item in fallList)
+                    if (hit.collider == null)
                     {
-                        Vector2 tilePos = item.transform.position;
-                        tilePos.y -= 1;
-                        item.transform.position = tilePos;
+                        foreach (GameObject item in fallList)
+                        {
+                            Vector2 tilePos = item.transform.position;
+                            tilePos.y -= 1;
+                            item.transform.position = tilePos;
 
+                        }
+                        position = fallList[fallList.Count - 1].gameObject.transform.position;
+
+                        position.y--;
+                        hit = Physics2D.Raycast(position, Vector2.down, 0.1f, mask1);
                     }
+                    else if (hit.collider.gameObject.layer == 3)
+                    {
+                        Destroy(hit.collider.gameObject);
+                        foreach (GameObject item in fallList)
+                        {
+                            Vector2 tilePos = item.transform.position;
+                            tilePos.y -= 1;
+                            item.transform.position = tilePos;
+
+                        }
+                        position = fallList[fallList.Count - 1].gameObject.transform.position;
+                       
+                        position.y--;
+                        hit = Physics2D.Raycast(position, Vector2.down, 0.1f, mask1);
+                    }
+        
+                    else if (hit.collider.gameObject.layer == 0)
+                    {
+                        loop = false;
+                        break;
+                    }
+                    weight = ammountOfblocks;
                 }
-                if (hit.collider.gameObject.layer == 0)
-                {
-                    loop = false;
-                }
-                weight = ammountOfblocks;
+             
 
                
             }
