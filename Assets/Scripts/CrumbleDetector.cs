@@ -9,12 +9,13 @@ public class CrumbleDetector : MonoBehaviour
     bool didItCrumble = false;
     private List<GameObject> fallList = new List<GameObject>();
     LayerMask mask;
-    
+    LayerMask mask1;
+
     // Start is called before the first frame update
     void Start()
     {
         mask = LayerMask.GetMask("ground");
-        
+        mask1 = LayerMask.GetMask("Default", "ground");
     }
 
     // Update is called once per frame
@@ -31,6 +32,7 @@ public class CrumbleDetector : MonoBehaviour
         bool loop = true;
         while (loop)
         {
+            fallList.Clear();
             RaycastHit2D hit = Physics2D.Raycast(position, Vector2.down, 100f, mask);
 
 
@@ -47,15 +49,52 @@ public class CrumbleDetector : MonoBehaviour
                 ammountOfblocks++;
             }
             
-            if (ammountOfblocks - weight < weight)
+            if (ammountOfblocks - weight < weight && fallList[fallList.Count - 1].gameObject.transform.position.y != -16.5f)
             {
-                foreach (GameObject item in fallList)
-                {
+               
 
+                while (true)
+                {
+                    foreach (GameObject item in fallList)
+                    {
+                        Vector2 tilePos = item.transform.position;
+                        tilePos.y -= 1;
+                        item.transform.position = tilePos;
+                       
+                    }
+                    position = fallList[fallList.Count - 1].gameObject.transform.position;
+                    Debug.Log($"The last item pos in list is {position}");
+                    position.y--;
+                    hit = Physics2D.Raycast(position, Vector2.down, 0.1f, mask1);
+
+                    if (hit.collider == null)
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        break;
+                    }
                 }
 
-       
-                
+                if (hit.collider.gameObject.layer == 3)
+                {
+                    Destroy(hit.collider.gameObject);
+                    foreach (GameObject item in fallList)
+                    {
+                        Vector2 tilePos = item.transform.position;
+                        tilePos.y -= 1;
+                        item.transform.position = tilePos;
+
+                    }
+                }
+                if (hit.collider.gameObject.layer == 0)
+                {
+                    loop = false;
+                }
+                weight = ammountOfblocks;
+
+               
             }
             else
             {

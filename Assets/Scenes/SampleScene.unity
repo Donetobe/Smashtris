@@ -279,7 +279,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47017eaf50b1a584d8f50a1997a0a0b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasSpawned: 0
   pieceList:
   - {fileID: 463851938154457216, guid: 8ba0bed0e774a5444855b2365a8acad7, type: 3}
   - {fileID: 3377825871593124822, guid: 91be5959c5735484e8ff7f24c2d2c5f2, type: 3}
@@ -1130,7 +1129,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 17, y: 36, z: 1}
+  m_LocalScale: {x: 15, y: 36, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1698,6 +1697,8 @@ PrefabInstance:
     - {fileID: 8617768028996825449, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
     - {fileID: 1512751567561137777, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
     - {fileID: 1070145662071616644, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 1463143872923465148, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
+    - {fileID: 7218959766412269840, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f65b8954f5feae4db13a7226ffbc77f, type: 3}
