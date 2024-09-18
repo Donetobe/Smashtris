@@ -49,40 +49,13 @@ public class CrumbleDetector : MonoBehaviour
             
             if (ammountOfblocks - weight < weight)
             {
-               
-
-                bool canCrumble = true;
-
-                foreach (var item in fallList)
+                foreach (GameObject item in fallList)
                 {
-                    Vector2 position1 = item.transform.position;
-
-                    if (position1.y - 1 < -17)
-                    {
-                         
-                        canCrumble = false;
-                        loop = false;
-                         
-                    }
-                  
 
                 }
+
+       
                 
-
-                foreach (var item in fallList)
-                {
-                    Vector2 position1 = item.transform.position;
-
-                    if (canCrumble)
-                    {
-                        StartCoroutine(ExampleCoroutine());
-                        position1.y -= 1;
-                        Debug.Log("It fell");
-                        item.transform.position = position1;
-                        
-                    }
-
-                }
             }
             else
             {
@@ -107,21 +80,5 @@ public class CrumbleDetector : MonoBehaviour
      
     }
 
-    void CheckIfCrumbleContinues()
-    {
-        int ammountOfblocks = 0;
-        RaycastHit2D hit = Physics2D.Raycast(fallList[fallList.Count - 1].gameObject.transform.position, Vector2.down, 1f, mask);
-        Vector2 position = transform.position;
-        while (hit.collider != null)
-        {
-            fallList.Add(hit.collider.gameObject);
-
-
-
-            position.y = hit.collider.transform.position.y - 0.9f;
-
-            hit = Physics2D.Raycast(position, Vector2.down, 0.1f, mask);
-            ammountOfblocks++;
-        }
-    }
+    
 }
