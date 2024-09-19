@@ -8,6 +8,7 @@ public class CrumbleDetector : MonoBehaviour
 {
     bool didItCrumble = false;
     private List<GameObject> fallList = new List<GameObject>();
+    private ScoreManager scoreManager;
     LayerMask mask;
     LayerMask mask1;
 
@@ -16,6 +17,7 @@ public class CrumbleDetector : MonoBehaviour
     {
         mask = LayerMask.GetMask("ground");
         mask1 = LayerMask.GetMask("Default", "ground");
+        scoreManager = GameObject.FindObjectOfType<ScoreManager>();
     }
 
     // Update is called once per frame
@@ -80,7 +82,7 @@ public class CrumbleDetector : MonoBehaviour
                         break;
                     }
                 }
-
+                int bloksToCrush = ammountOfblocks;
                 while (true)
                 {
                     if (hit.collider == null)
@@ -97,15 +99,17 @@ public class CrumbleDetector : MonoBehaviour
                         position.y--;
                         hit = Physics2D.Raycast(position, Vector2.down, 0.1f, mask1);
                     }
-                    else if (hit.collider.gameObject.layer == 3)
+                    else if (hit.collider.gameObject.layer == 3 && bloksToCrush >= 0)
                     {
+                        scoreManager.Score += 1;
                         Destroy(hit.collider.gameObject);
+                         bloksToCrush--;
                         foreach (GameObject item in fallList)
                         {
                             Vector2 tilePos = item.transform.position;
                             tilePos.y -= 1;
                             item.transform.position = tilePos;
-
+                         
                         }
                         position = fallList[fallList.Count - 1].gameObject.transform.position;
                        
@@ -114,6 +118,11 @@ public class CrumbleDetector : MonoBehaviour
                     }
         
                     else if (hit.collider.gameObject.layer == 0)
+                    {
+                        loop = false;
+                        break;
+                    }
+                    else
                     {
                         loop = false;
                         break;

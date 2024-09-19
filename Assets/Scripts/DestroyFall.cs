@@ -6,6 +6,7 @@ using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 
 public class DestroyFall : MonoBehaviour
@@ -95,7 +96,10 @@ public class DestroyFall : MonoBehaviour
               
             }
 
-
+            if (this.gameObject.transform.position.y >= 15)
+            {
+                SceneManager.LoadScene(0);
+            }
 
             didItStop = true;
             dedectCrumble();
@@ -115,6 +119,7 @@ public class DestroyFall : MonoBehaviour
 
     void dedectCrumble()
     {
+     
        Vector2 OGPos = transform.position;
         int weight = 1;
         Vector2 position = transform.position;
