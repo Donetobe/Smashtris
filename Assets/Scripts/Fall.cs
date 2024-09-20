@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Fall : MonoBehaviour
 {
@@ -152,6 +153,12 @@ public class Fall : MonoBehaviour
 
     public void SpawnPiece()
     {
+        if (this.gameObject.transform.position.y >= 13)
+        {
+
+            SceneManager.LoadScene(1);
+
+        }
         if (!hasSpawned)
         {
             spawner.SpawnPiece();

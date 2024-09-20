@@ -102,6 +102,7 @@ public class CrumbleDetector : MonoBehaviour
                     else if (hit.collider.gameObject.layer == 3 && bloksToCrush >= 0)
                     {
                         scoreManager.Score += 1;
+                        scoreManager.UpdateHighScore(scoreManager.Score);
                         Destroy(hit.collider.gameObject);
                          bloksToCrush--;
                         foreach (GameObject item in fallList)

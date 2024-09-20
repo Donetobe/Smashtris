@@ -36,7 +36,7 @@ public class ScoreManager : MonoBehaviour
       
     }
 
-    private void UpdateHighScore(int currentScore)
+    public void UpdateHighScore(int currentScore)
     {
         saveHighScore = PlayerPrefs.GetInt("HighScore", 0);
 

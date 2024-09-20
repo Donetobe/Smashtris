@@ -61,6 +61,8 @@ public class DestroyFall : MonoBehaviour
 
             }
 
+
+
             parentScript.SpawnPiece();
 
 
@@ -96,10 +98,6 @@ public class DestroyFall : MonoBehaviour
               
             }
 
-            if (this.gameObject.transform.position.y >= 15)
-            {
-                SceneManager.LoadScene(1);
-            }
 
             didItStop = true;
             dedectCrumble();
