@@ -156,7 +156,7 @@ public class Fall : MonoBehaviour
         if (this.gameObject.transform.position.y >= 13)
         {
 
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
 
         }
         if (!hasSpawned)

@@ -1,12 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Burst.CompilerServices;
-using Unity.Collections.LowLevel.Unsafe;
-using UnityEditor.PackageManager;
+
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.UIElements;
-using UnityEngine.SceneManagement;
+
+
 
 
 public class DestroyFall : MonoBehaviour
